@@ -1,42 +1,43 @@
 @import "tailwindcss";
 
 @theme inline {
-  --color-fygate-bg: #0a0d0b;
-  --color-fygate-surface: #111510;
-  --color-fygate-surface-2: #181e15;
-  --color-fygate-border: rgba(120, 200, 80, 0.12);
-  --color-fygate-green: #7ecb45;
-  --color-fygate-green-light: #a8e063;
-  --color-fygate-green-dim: rgba(126, 203, 69, 0.15);
-  --color-fygate-cream: #f2ead8;
-  --color-fygate-cream-dim: rgba(242, 234, 216, 0.6);
-  --color-fygate-orange: #e8824a;
-  --color-fygate-text: #e8e4d8;
-  --color-fygate-text-dim: rgba(232, 228, 216, 0.55);
-  --color-fygate-text-faint: rgba(232, 228, 216, 0.28);
+  --color-brand-base: #0a0d0b;
+  --color-brand-surface: #111510;
+  --color-brand-surface-alt: #181e15;
+  --color-brand-border: rgba(120, 200, 80, 0.12);
+  --color-brand-primary: #7ecb45;
+  --color-brand-primary-soft: #a8e063;
+  --color-brand-primary-muted: rgba(126, 203, 69, 0.15);
+  --color-brand-contrast: #f2ead8;
+  --color-brand-contrast-muted: rgba(242, 234, 216, 0.6);
+  --color-brand-accent: #e8824a;
+  --color-brand-foreground: #e8e4d8;
+  --color-brand-foreground-muted: rgba(232, 228, 216, 0.55);
+  --color-brand-foreground-subtle: rgba(232, 228, 216, 0.28);
 
   --font-sans: "DM Sans", sans-serif;
   --font-serif: var(--font-fraunces), serif;
   --font-mono: "DM Mono", monospace;
+
   --font-google-sans: var(--font-google-sans);
 }
 
 @layer base {
   :root {
     /* Backward-compatible aliases for existing component styles */
-    --bg: var(--color-fygate-bg);
-    --surface: var(--color-fygate-surface);
-    --surface2: var(--color-fygate-surface-2);
-    --border: var(--color-fygate-border);
-    --green: var(--color-fygate-green);
-    --green-light: var(--color-fygate-green-light);
-    --green-dim: var(--color-fygate-green-dim);
-    --cream: var(--color-fygate-cream);
-    --cream-dim: var(--color-fygate-cream-dim);
-    --orange: var(--color-fygate-orange);
-    --text: var(--color-fygate-text);
-    --text-dim: var(--color-fygate-text-dim);
-    --text-faint: var(--color-fygate-text-faint);
+    --bg: var(--color-brand-base);
+    --surface: var(--color-brand-surface);
+    --surface2: var(--color-brand-surface-alt);
+    --border: var(--color-brand-border);
+    --green: var(--color-brand-primary);
+    --green-light: var(--color-brand-primary-soft);
+    --green-dim: var(--color-brand-primary-muted);
+    --cream: var(--color-brand-contrast);
+    --cream-dim: var(--color-brand-contrast-muted);
+    --orange: var(--color-brand-accent);
+    --text: var(--color-brand-foreground);
+    --text-dim: var(--color-brand-foreground-muted);
+    --text-faint: var(--color-brand-foreground-subtle);
     --radius: 16px;
     --radius-sm: 8px;
   }
@@ -54,7 +55,7 @@
   }
 
   body {
-    @apply bg-fygate-bg text-fygate-text font-sans leading-relaxed text-[clamp(0.95rem,1.2vw,1.1rem)];
+    @apply bg-brand-base text-brand-foreground font-sans leading-relaxed text-[clamp(0.95rem,1.2vw,1.1rem)];
     overflow-x: hidden;
   }
 
