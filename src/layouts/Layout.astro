@@ -1,23 +1,52 @@
-<!doctype html>
-<html lang="en">
-	<head>
-		<meta charset="UTF-8" />
-		<meta name="viewport" content="width=device-width" />
-		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
-		<link rel="icon" href="/favicon.ico" />
-		<meta name="generator" content={Astro.generator} />
-		<title>Astro Basics</title>
-	</head>
-	<body>
-		<slot />
-	</body>
-</html>
+---
+import "../styles/global.css";
+import { Font } from "astro:assets";
+---
 
-<style>
-	html,
-	body {
-		margin: 0;
-		width: 100%;
-		height: 100%;
-	}
-</style>
+<html lang="en" class="w-full h-full">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width" />
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <link rel="icon" href="/favicon.ico" />
+
+    <meta name="generator" content={Astro.generator} />
+    <title>fyGATE – Food Technology GATE Coaching</title>
+    <meta
+      name="description"
+      content="fyGATE is a specialized coaching program designed to help students excel in the GATE exam for Food Technology. With expert guidance, comprehensive study materials, and a structured curriculum, fyGATE prepares you to achieve top scores and secure your future in the food industry."
+    />
+    <link rel="sitemap" href="/sitemap-index.xml" />
+
+    <meta
+      property="og:title"
+      content="fyGATE – Food Technology GATE Coaching"
+    />
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="https://www.fygate.foodemy.in/" />
+    <meta
+      property="og:description"
+      content="fyGATE is a specialized coaching program designed to help students excel in the GATE exam for Food Technology. With expert guidance, comprehensive study materials, and a structured curriculum, fyGATE prepares you to achieve top scores and secure your future in the food industry."
+    />
+
+    <meta property="og:image" content="https://fygate.foodemy.in/og.webp" />
+    <meta property="og:image:width" content="1200" />
+    <meta property="og:image:height" content="630" />
+    <meta property="twitter:card" content="summary_large_image" />
+    <meta
+      property="twitter:image"
+      content="https://fygate.foodemy.in/og.webp"
+    />
+    <meta
+      property="og:image:alt"
+      content="fyGATE – Food Technology GATE Coaching. Crack GATE with a plan, not just prep. June 2025 batch opening soon."
+    />
+
+    <Font cssVariable="--font-fraunces" />
+    <Font cssVariable="--font-google-sans" />
+    <Font cssVariable="--font-googleicons" />
+  </head>
+  <body class="w-full h-full">
+    <slot />
+  </body>
+</html>

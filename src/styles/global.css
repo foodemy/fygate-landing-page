@@ -1,0 +1,132 @@
+@import "tailwindcss";
+
+@theme inline {
+  --color-fygate-bg: #0a0d0b;
+  --color-fygate-surface: #111510;
+  --color-fygate-surface-2: #181e15;
+  --color-fygate-border: rgba(120, 200, 80, 0.12);
+  --color-fygate-green: #7ecb45;
+  --color-fygate-green-light: #a8e063;
+  --color-fygate-green-dim: rgba(126, 203, 69, 0.15);
+  --color-fygate-cream: #f2ead8;
+  --color-fygate-cream-dim: rgba(242, 234, 216, 0.6);
+  --color-fygate-orange: #e8824a;
+  --color-fygate-text: #e8e4d8;
+  --color-fygate-text-dim: rgba(232, 228, 216, 0.55);
+  --color-fygate-text-faint: rgba(232, 228, 216, 0.28);
+
+  --font-sans: "DM Sans", sans-serif;
+  --font-serif: var(--font-fraunces), serif;
+  --font-mono: "DM Mono", monospace;
+  --font-icons: var(--font-googleicons);
+  --font-google-sans: var(--font-google-sans);
+}
+
+@layer base {
+  :root {
+    /* Backward-compatible aliases for existing component styles */
+    --bg: var(--color-fygate-bg);
+    --surface: var(--color-fygate-surface);
+    --surface2: var(--color-fygate-surface-2);
+    --border: var(--color-fygate-border);
+    --green: var(--color-fygate-green);
+    --green-light: var(--color-fygate-green-light);
+    --green-dim: var(--color-fygate-green-dim);
+    --cream: var(--color-fygate-cream);
+    --cream-dim: var(--color-fygate-cream-dim);
+    --orange: var(--color-fygate-orange);
+    --text: var(--color-fygate-text);
+    --text-dim: var(--color-fygate-text-dim);
+    --text-faint: var(--color-fygate-text-faint);
+    --radius: 16px;
+    --radius-sm: 8px;
+  }
+
+  /* *,
+  *::before,
+  *::after {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+  } */
+
+  html {
+    scroll-behavior: smooth;
+  }
+
+  body {
+    @apply bg-fygate-bg text-fygate-text font-sans leading-relaxed text-[clamp(0.95rem,1.2vw,1.1rem)];
+    overflow-x: hidden;
+  }
+
+  body::before {
+    content: "";
+    position: fixed;
+    inset: 0;
+    background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 200 200' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)' opacity='1'/%3E%3C/svg%3E");
+    opacity: 0.03;
+    pointer-events: none;
+    z-index: 0;
+  }
+}
+
+@layer utilities {
+  @keyframes pulse-dot {
+    0%,
+    100% {
+      opacity: 1;
+      transform: scale(1);
+    }
+
+    50% {
+      opacity: 0.5;
+      transform: scale(0.7);
+    }
+  }
+
+  @keyframes float-card {
+    0%,
+    100% {
+      transform: translateY(0);
+    }
+
+    50% {
+      transform: translateY(-10px);
+    }
+  }
+
+  @keyframes fade-up {
+    from {
+      opacity: 0;
+      transform: translateY(24px);
+    }
+
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+
+  @keyframes fade-in {
+    from {
+      opacity: 0;
+    }
+
+    to {
+      opacity: 1;
+    }
+  }
+}
+
+[data-animate] {
+  opacity: 0;
+  transform: translateY(30px);
+  transition:
+    opacity 0.6s ease,
+    transform 0.6s ease;
+}
+
+[data-animate].visible {
+  opacity: 1;
+  transform: translateY(0);
+}

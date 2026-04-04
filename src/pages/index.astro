@@ -1,11 +1,59 @@
 ---
-import Welcome from '../components/Welcome.astro';
-import Layout from '../layouts/Layout.astro';
+import SiteNav from "../components/SiteNav.astro";
+import HeroSection from "../components/HeroSection.astro";
+import StatsSection from "../components/StatsSection.astro";
+import HowItWorksSection from "../components/HowItWorksSection.astro";
+import ModuleTimelineSection from "../components/ModuleTimelineSection.astro";
+import VideoSection from "../components/VideoSection.astro";
+import QuoteSection from "../components/QuoteSection.astro";
+import SupportSection from "../components/SupportSection.astro";
+import CtaSection from "../components/CtaSection.astro";
+import SiteFooter from "../components/SiteFooter.astro";
+import ScrollAnimationScript from "../components/ScrollAnimationScript.astro";
 
-// Welcome to Astro! Wondering what to do next? Check out the Astro documentation at https://docs.astro.build
-// Don't want to use any of this? Delete everything in this file, the `assets`, `components`, and `layouts` directories, and start fresh.
+import BatchBanner from "../components/BatchBanner.astro";
+import Layout from "../layouts/Layout.astro";
 ---
 
 <Layout>
-	<Welcome />
+  <div
+    class="pointer-events-none fixed -left-37.5 -top-50 z-0 h-150 w-150 rounded-full bg-[rgba(126,203,69,0.08)] blur-[120px]"
+  >
+  </div>
+  <div
+    class="pointer-events-none fixed bottom-[10%] -right-25 z-0 h-100 w-100 rounded-full bg-[rgba(232,130,74,0.06)] blur-[120px]"
+  >
+  </div>
+  <div
+    class="pointer-events-none fixed left-[40%] top-[50%] z-0 h-75 w-75 rounded-full bg-[rgba(126,203,69,0.05)] blur-[120px]"
+  >
+  </div>
+
+  <BatchBanner />
+  <SiteNav />
+  <HeroSection />
+  <StatsSection />
+
+  <hr class="m-0 border-0 border-t border-fygate-border" />
+
+  <HowItWorksSection />
+
+  <hr class="m-0 border-0 border-t border-fygate-border" />
+
+  <ModuleTimelineSection />
+
+  <hr class="m-0 border-0 border-t border-fygate-border" />
+
+  <VideoSection />
+  <QuoteSection />
+
+  <hr class="m-0 border-0 border-t border-fygate-border" />
+
+  <!-- <SupportSection /> -->
+
+  <!-- <hr class="m-0 border-0 border-t border-fygate-border" /> -->
+
+  <CtaSection />
+  <SiteFooter />
+  <ScrollAnimationScript />
 </Layout>

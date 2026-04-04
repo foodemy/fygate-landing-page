@@ -1,0 +1,27 @@
+<script>
+  const observer = new IntersectionObserver(
+    (entries) => {
+      entries.forEach((entry) => {
+        if (entry.isIntersecting) {
+          setTimeout(() => {
+            entry.target.classList.add("visible");
+          }, 80);
+          observer.unobserve(entry.target);
+        }
+      });
+    },
+    { threshold: 0.1 },
+  );
+
+  document
+    .querySelectorAll("[data-animate]")
+    .forEach((el) => observer.observe(el));
+
+  document.querySelectorAll(".support-card").forEach((card, i) => {
+    card.style.transitionDelay = `${i * 0.07}s`;
+    if (!card.hasAttribute("data-animate")) {
+      card.setAttribute("data-animate", "");
+    }
+    observer.observe(card);
+  });
+</script>

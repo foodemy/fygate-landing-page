@@ -1,0 +1,56 @@
+---
+const serverTime = Date.now();
+---
+
+<div
+  class="batch-banner bg-linear-to-r from-fygate-surface-2 via-fygate-green-dim to-fygate-surface-2 px-5 py-2.5 text-[0.8rem] tracking-[0.03em] text-fygate-text-dim"
+>
+  <div
+    class="flex flex-wrap gap-y-1 gap-x-2 justify-center items-center mx-auto text-center max-w-300"
+  >
+    <strong class="text-fygate-green-light">fyGATE 2027 Batch</strong>
+    <span aria-hidden="true">·</span>
+    <span>Admissions opening soon</span>
+    <span aria-hidden="true">·</span>
+    <span>Classes start on 14th June 2026</span>
+    <span aria-hidden="true">·</span>
+    <span
+      ><span class="font-mono batch-countdown text-fygate-green-light"></span> to
+      go</span
+    >
+  </div>
+</div>
+
+<script define:vars={{ serverTime }}>
+  const batchStartDate = new Date("2026-06-14T00:00:00+05:30").getTime();
+  const countdownEl = document.querySelector(".batch-countdown");
+
+  const clientTime = new Date().getTime();
+  const offset = serverTime - clientTime;
+
+  function updateCountdown() {
+    if (!countdownEl) return;
+
+    const correctedNow = Date.now() + offset;
+
+    const distance = batchStartDate - correctedNow;
+
+    if (distance < 0) {
+      clearInterval(countdownInterval);
+      countdownEl.remove();
+      return;
+    }
+
+    const days = Math.floor(distance / (1000 * 60 * 60 * 24));
+    const hours = Math.floor(
+      (distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60),
+    );
+    const minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+    const seconds = Math.floor((distance % (1000 * 60)) / 1000);
+
+    countdownEl.textContent = `${days}d ${hours}h ${minutes}m ${seconds}s`;
+  }
+
+  const countdownInterval = setInterval(updateCountdown, 1000);
+  updateCountdown();
+</script>
