@@ -3,7 +3,7 @@ import { Icon } from "astro-icon/components";
 ---
 
 <section
-  class="mx-auto min-h-[92vh] flex justify-center items-center gap-0 px-[5%] pb-15 pt-20 max-lg:min-h-auto max-md:gap-12 max-lg:pt-12"
+  class="mx-auto min-h-[92vh] flex justify-center items-center gap-0 px-[5%] pb-15 pt-20 max-lg:min-h-auto max-md:gap-12 max-lg:pt-12 bg-brand-base"
 >
   <div class="flex flex-col items-center">
     <!-- <div
@@ -12,14 +12,16 @@ import { Icon } from "astro-icon/components";
         Food Technology · GATE 2027
       </div> -->
     <h1
-      class="mb-6 animate-[fade-up_0.6s_0.1s_ease_both] font-serif text-[clamp(2.6rem,4.5vw,4.2rem)] leading-[1.05] font-black text-center tracking-[-0.04em]"
+      class="mb-6 text-brand-contrast animate-[fade-up_0.6s_0.1s_ease_both] font-serif text-[clamp(2.6rem,4.5vw,4.2rem)] leading-[1.05] font-black text-center tracking-[-0.04em]"
     >
       <span class="inline-block relative text-brand-contrast">Crack GATE</span>
-      <em class="block italic font-bold text-brand-primary">with a plan,</em>
+      <em class="block italic font-bold text-brand-primary text-shadow-lg"
+        >with a plan,</em
+      >
       not just prep.
     </h1>
     <p
-      class="mb-10 text-center max-w-120 animate-[fade-up_0.6s_0.2s_ease_both] leading-[1.7] font-light text-brand-foreground-muted"
+      class="mb-10 text-center max-w-120 animate-[fade-up_0.6s_0.2s_ease_both] leading-[1.7] font-light text-brand-contrast-muted"
     >
       fyGATE is a structured, mentor-led coaching program designed specifically
       for Food Technology students — with video lectures, module-based
@@ -31,14 +33,14 @@ import { Icon } from "astro-icon/components";
       <a
         href="https://youtube.com/playlist?list=PLU1Lc2In5F87XqV6QDDpfdBkbkUthu7oF"
         target="_blank"
-        class="inline-flex items-center justify-center max-md:min-w-80 h-13 gap-2 rounded-full bg-brand-primary px-6 text-[0.95rem] font-bold text-brand-base transition hover:-translate-y-0.5 hover:bg-brand-primary-soft hover:shadow-[0_12px_40px_rgba(126,203,69,0.3)]"
+        class="inline-flex items-center justify-center max-md:min-w-80 h-13 gap-2 rounded-full bg-brand-primary px-6 text-[0.95rem] font-bold text-brand-contrast transition hover:-translate-y-0.5 hover:bg-brand-primary-soft hover:shadow-brand-primary-soft hover:shadow-2xl"
       >
-        <Icon name="play-circle-line" class="text-3xl text-brand-base" />
+        <Icon name="play-circle-line" class="text-3xl text-brand-contrast" />
         Watch Demo Videos
       </a>
       <a
         href="#cta"
-        class="inline-flex max-md:min-w-80 items-center justify-center text-center h-13 gap-2 rounded-full border border-brand-border px-7.5 py-3.5 text-[0.95rem] font-medium text-brand-foreground transition hover:border-brand-primary hover:text-brand-primary-soft"
+        class="inline-flex max-md:min-w-80 items-center justify-center text-center h-13 gap-2 rounded-full border border-brand-border px-7.5 py-3.5 text-[0.95rem] font-medium text-brand-foreground transition hover:border-brand-contrast hover:text-brand-contrast"
       >
         Notify Me for Upcoming Batch <Icon
           name="arrow-down-line"

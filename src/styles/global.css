@@ -1,22 +1,22 @@
 @import "tailwindcss";
 
 @theme inline {
-  --color-brand-base: #0a0d0b;
-  --color-brand-surface: #111510;
-  --color-brand-surface-alt: #181e15;
-  --color-brand-border: rgba(120, 200, 80, 0.12);
-  --color-brand-primary: #7ecb45;
-  --color-brand-primary-soft: #a8e063;
-  --color-brand-primary-muted: rgba(126, 203, 69, 0.15);
-  --color-brand-contrast: #f2ead8;
-  --color-brand-contrast-muted: rgba(242, 234, 216, 0.6);
-  --color-brand-accent: #e8824a;
-  --color-brand-foreground: #e8e4d8;
-  --color-brand-foreground-muted: rgba(232, 228, 216, 0.55);
-  --color-brand-foreground-subtle: rgba(232, 228, 216, 0.28);
+  --color-brand-base: #f7f5ef;
+  --color-brand-surface: #f0ede3;
+  --color-brand-surface-alt: #e8e4d8;
+  --color-brand-border: rgba(180, 155, 0, 0.18);
+  --color-brand-primary: #ffdb00;
+  --color-brand-primary-soft: #ffe84d;
+  --color-brand-primary-muted: rgba(255, 219, 0, 0.18);
+  --color-brand-contrast: #1a1a12;
+  --color-brand-contrast-muted: rgba(26, 26, 18, 0.6);
+  --color-brand-accent: #dc5028;
+  --color-brand-foreground: #3d3c2e;
+  --color-brand-foreground-muted: rgba(61, 60, 46, 0.55);
+  --color-brand-foreground-subtle: rgba(61, 60, 46, 0.28);
 
   --font-sans: "DM Sans", sans-serif;
-  --font-serif: var(--font-fraunces), serif;
+  --font-serif: var(--font-merriweather), serif;
   --font-mono: "DM Mono", monospace;
 
   --font-google-sans: var(--font-google-sans);

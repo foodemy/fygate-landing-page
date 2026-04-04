@@ -15,8 +15,8 @@ export default defineConfig({
   fonts: [
     {
       provider: fontProviders.google(),
-      name: "Fraunces",
-      cssVariable: "--font-fraunces",
+      name: "Merriweather",
+      cssVariable: "--font-merriweather",
       weights: [400, 500, 600, 700, 800, 900],
     },
     {
