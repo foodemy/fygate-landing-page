@@ -1,3 +1,7 @@
+---
+import { Icon } from "astro-icon/components";
+---
+
 <section
   class="mx-auto min-h-[92vh] flex justify-center items-center gap-0 px-[5%] pb-15 pt-20 max-lg:min-h-auto max-md:gap-12 max-lg:pt-12"
 >
@@ -29,18 +33,17 @@
         target="_blank"
         class="inline-flex items-center justify-center max-md:min-w-80 h-13 gap-2 rounded-full bg-fygate-green px-6 text-[0.95rem] font-bold text-fygate-bg transition hover:-translate-y-0.5 hover:bg-fygate-green-light hover:shadow-[0_12px_40px_rgba(126,203,69,0.3)]"
       >
-        <span class="text-3xl font-light font-icons"> play_circle </span>
+        <Icon name="play-circle-line" class="text-3xl text-fygate-bg" />
         Watch Demo Videos
       </a>
       <a
         href="#cta"
         class="inline-flex max-md:min-w-80 items-center justify-center text-center h-13 gap-2 rounded-full border border-fygate-border px-7.5 py-3.5 text-[0.95rem] font-medium text-fygate-text transition hover:border-fygate-green hover:text-fygate-green-light"
       >
-        Notify Me for Upcoming Batch <span
-          class="text-3xl font-light font-icons"
-        >
-          arrow_downward
-        </span>
+        Notify Me for Upcoming Batch <Icon
+          name="arrow-down-line"
+          class="text-3xl"
+        />
       </a>
     </div>
   </div>

@@ -25,20 +25,5 @@ export default defineConfig({
       cssVariable: "--font-google-sans",
       weights: [400, 500, 600, 700, 800, 900],
     },
-    {
-      provider: fontProviders.googleicons(),
-      name: "Material Symbols Outlined",
-      cssVariable: "--font-googleicons",
-      options: {
-        experimental: {
-          glyphs: [
-            "arrow_downward",
-            "play_circle",
-            "check_small",
-            "play_arrow",
-          ],
-        },
-      },
-    },
   ],
 });

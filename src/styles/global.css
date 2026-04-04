@@ -18,7 +18,6 @@
   --font-sans: "DM Sans", sans-serif;
   --font-serif: var(--font-fraunces), serif;
   --font-mono: "DM Mono", monospace;
-  --font-icons: var(--font-googleicons);
   --font-google-sans: var(--font-google-sans);
 }
 
