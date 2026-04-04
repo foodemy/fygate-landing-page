@@ -1,8 +1,8 @@
 @import "tailwindcss";
 
 @theme inline {
-  --color-brand-base: #f7f5ef;
-  --color-brand-surface: #f0ede3;
+  --color-brand-base: #ffffff;
+  --color-brand-surface: rgb(255, 252, 240);
   --color-brand-surface-alt: #e8e4d8;
   --color-brand-border: rgba(180, 155, 0, 0.18);
   --color-brand-primary: #ffdb00;
