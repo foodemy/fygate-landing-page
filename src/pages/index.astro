@@ -13,47 +13,37 @@ import ScrollAnimationScript from "../components/ScrollAnimationScript.astro";
 
 import BatchBanner from "../components/BatchBanner.astro";
 import Layout from "../layouts/Layout.astro";
+import FallbackBatchBanner from "../components/FallbackBatchBanner.astro";
 ---
 
-<Layout>
-  <div
-    class="pointer-events-none fixed -left-37.5 -top-50 z-0 h-150 w-150 rounded-full bg-[rgba(126,203,69,0.08)] blur-[120px]"
-  >
-  </div>
-  <div
-    class="pointer-events-none fixed bottom-[10%] -right-25 z-0 h-100 w-100 rounded-full bg-[rgba(232,130,74,0.06)] blur-[120px]"
-  >
-  </div>
-  <div
-    class="pointer-events-none fixed left-[40%] top-[50%] z-0 h-75 w-75 rounded-full bg-[rgba(126,203,69,0.05)] blur-[120px]"
-  >
-  </div>
+<Layout />
 
-  <BatchBanner />
-  <SiteNav />
-  <HeroSection />
-  <StatsSection />
+<BatchBanner server:defer>
+  <FallbackBatchBanner slot="fallback" />
+</BatchBanner>
+<SiteNav />
+<HeroSection />
+<StatsSection />
 
-  <hr class="m-0 border-0 border-t border-fygate-border" />
+<hr class="m-0 border-0 border-t border-brand-border" />
 
-  <HowItWorksSection />
+<HowItWorksSection />
 
-  <hr class="m-0 border-0 border-t border-fygate-border" />
+<hr class="m-0 border-0 border-t border-brand-border" />
 
-  <ModuleTimelineSection />
+<ModuleTimelineSection />
 
-  <hr class="m-0 border-0 border-t border-fygate-border" />
+<hr class="m-0 border-0 border-t border-brand-border" />
 
-  <VideoSection />
-  <QuoteSection />
+<VideoSection />
+<QuoteSection />
 
-  <hr class="m-0 border-0 border-t border-fygate-border" />
+<hr class="m-0 border-0 border-t border-brand-border" />
 
-  <!-- <SupportSection /> -->
+<!-- <SupportSection /> -->
 
-  <!-- <hr class="m-0 border-0 border-t border-fygate-border" /> -->
+<!-- <hr class="m-0 border-0 border-t border-brand-border" /> -->
 
-  <CtaSection />
-  <SiteFooter />
-  <ScrollAnimationScript />
-</Layout>
+<CtaSection />
+<SiteFooter />
+<ScrollAnimationScript />

@@ -1,44 +1,53 @@
 @import "tailwindcss";
 
 @theme inline {
-  --color-fygate-bg: #0a0d0b;
-  --color-fygate-surface: #111510;
-  --color-fygate-surface-2: #181e15;
-  --color-fygate-border: rgba(120, 200, 80, 0.12);
-  --color-fygate-green: #7ecb45;
-  --color-fygate-green-light: #a8e063;
-  --color-fygate-green-dim: rgba(126, 203, 69, 0.15);
-  --color-fygate-cream: #f2ead8;
-  --color-fygate-cream-dim: rgba(242, 234, 216, 0.6);
-  --color-fygate-orange: #e8824a;
-  --color-fygate-text: #e8e4d8;
-  --color-fygate-text-dim: rgba(232, 228, 216, 0.55);
-  --color-fygate-text-faint: rgba(232, 228, 216, 0.28);
+  --color-brand-base: #ffffff;
+  --color-brand-surface: rgb(255, 252, 240);
+  --color-brand-surface-alt: #e8e4d8;
+  --color-brand-border: rgba(180, 155, 0, 0.18);
+  --color-brand-primary: #ffdb00;
+  --color-brand-primary-soft: #ffe84d;
+  --color-brand-primary-muted: rgba(255, 219, 0, 0.18);
+  --color-brand-contrast: #1a1a12;
+  --color-brand-contrast-muted: rgba(26, 26, 18, 0.6);
+  --color-brand-accent: #dc5028;
+  --color-brand-foreground: #3d3c2e;
+  --color-brand-foreground-muted: rgba(61, 60, 46, 0.55);
+  --color-brand-foreground-subtle: rgba(61, 60, 46, 0.28);
 
   --font-sans: "DM Sans", sans-serif;
-  --font-serif: var(--font-fraunces), serif;
+  --font-serif: var(--font-merriweather), serif;
   --font-mono: "DM Mono", monospace;
+
   --font-google-sans: var(--font-google-sans);
 }
 
 @layer base {
   :root {
     /* Backward-compatible aliases for existing component styles */
-    --bg: var(--color-fygate-bg);
-    --surface: var(--color-fygate-surface);
-    --surface2: var(--color-fygate-surface-2);
-    --border: var(--color-fygate-border);
-    --green: var(--color-fygate-green);
-    --green-light: var(--color-fygate-green-light);
-    --green-dim: var(--color-fygate-green-dim);
-    --cream: var(--color-fygate-cream);
-    --cream-dim: var(--color-fygate-cream-dim);
-    --orange: var(--color-fygate-orange);
-    --text: var(--color-fygate-text);
-    --text-dim: var(--color-fygate-text-dim);
-    --text-faint: var(--color-fygate-text-faint);
+    --bg: var(--color-brand-base);
+    --surface: var(--color-brand-surface);
+    --surface2: var(--color-brand-surface-alt);
+    --border: var(--color-brand-border);
+    --green: var(--color-brand-primary);
+    --green-light: var(--color-brand-primary-soft);
+    --green-dim: var(--color-brand-primary-muted);
+    --cream: var(--color-brand-contrast);
+    --cream-dim: var(--color-brand-contrast-muted);
+    --orange: var(--color-brand-accent);
+    --text: var(--color-brand-foreground);
+    --text-dim: var(--color-brand-foreground-muted);
+    --text-faint: var(--color-brand-foreground-subtle);
     --radius: 16px;
     --radius-sm: 8px;
+  }
+
+  @layer utilities {
+    .highlight {
+      background: url(//s2.svgbox.net/pen-brushes.svg?ic=brush-1&color=ffdb00);
+      margin: -2px -6px;
+      padding: 2px 6px;
+    }
   }
 
   /* *,
@@ -54,7 +63,7 @@
   }
 
   body {
-    @apply bg-fygate-bg text-fygate-text font-sans leading-relaxed text-[clamp(0.95rem,1.2vw,1.1rem)];
+    @apply bg-brand-base text-brand-foreground font-sans leading-relaxed text-[clamp(0.95rem,1.2vw,1.1rem)];
     overflow-x: hidden;
   }
 
