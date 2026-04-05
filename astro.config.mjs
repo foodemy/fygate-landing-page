@@ -5,6 +5,10 @@ import tailwindcss from "@tailwindcss/vite";
 
 import netlify from "@astrojs/netlify";
 
+import sitemap from "@astrojs/sitemap";
+
+import partytown from "@astrojs/partytown";
+
 // https://astro.build/config
 export default defineConfig({
   site: "https://www.fygate.foodemy.in",
@@ -15,7 +19,7 @@ export default defineConfig({
     plugins: [tailwindcss()],
   },
 
-  integrations: [icon()],
+  integrations: [icon(), sitemap(), partytown()],
 
   fonts: [
     {
