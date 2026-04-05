@@ -13,11 +13,14 @@ import ScrollAnimationScript from "../components/ScrollAnimationScript.astro";
 
 import BatchBanner from "../components/BatchBanner.astro";
 import Layout from "../layouts/Layout.astro";
+import FallbackBatchBanner from "../components/FallbackBatchBanner.astro";
 ---
 
 <Layout />
 
-<BatchBanner />
+<BatchBanner server:defer>
+  <FallbackBatchBanner slot="fallback" />
+</BatchBanner>
 <SiteNav />
 <HeroSection />
 <StatsSection />
